@@ -1,0 +1,33 @@
+{
+  "name": "ingress-badge-maker",
+  "version": "1.0.0",
+  "description": "Generates ingress badges",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon --exec node -r dotenv/config index.js",
+    "test": "standard",
+    "fix": "standard --fix"
+  },
+  "keywords": [
+    "ingress"
+  ],
+  "author": "Pedro Fracassi (@pedrofracassi)",
+  "license": "MIT",
+  "dependencies": {
+    "image-dither": "^1.0.1",
+    "install": "^0.11.0",
+    "jimp": "^0.2.28",
+    "node-gyp": "^3.6.2",
+    "node-telegram-bot-api": "^0.30.0",
+    "npm": "^6.0.1",
+    "potrace": "^2.1.1",
+    "standard": "^11.0.1",
+    "svg2png": "^4.1.1",
+    "vorpal": "^1.12.0"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.5"
+  }
+}
