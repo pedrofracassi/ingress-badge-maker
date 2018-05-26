@@ -8,7 +8,7 @@ if (!process.env.TELEGRAM_TOKEN) {
 const bot = new Telegram(process.env.TELEGRAM_TOKEN, {polling: true})
 
 bot.on('message', async (msg) => {
-  console.log(msg)
+  console.log(`Generating badge for ${msg.from.first_name} (${msg.from.username})...`)
   if(msg.photo) {
     bot.sendChatAction(msg.chat.id, 'upload_photo').catch(console.error)
     const {file_path} = await bot.getFile(msg.photo[msg.photo.length - 1].file_id)
